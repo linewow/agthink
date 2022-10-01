@@ -1,0 +1,22 @@
+{
+    "name": "agthink/think-auth",
+    "description": "thinkphp auth composer",
+    "type": "library",
+    "require": {
+        "php": "^7.0 || ^8.0",
+        "topthink/framework": "^5.1.10 || ^6.0.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "agthink\\think-auth\\": "src"
+        }
+    },
+    "authors": [
+        {
+            "name": "AG",
+            "email": "277493165@qq.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
