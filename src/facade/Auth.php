@@ -6,13 +6,9 @@ use think\Facade;
 
 class Auth extends Facade
 {
-//    protected static function getFacadeClass()
-//    {
-//        return 'agthink\auth\Auth';
-//    }
-
-    public function aa(){
-        return 2;
-    }
+   protected static function getFacadeClass()
+   {
+       return 'agthink\auth\Auth';
+   }
 
 }

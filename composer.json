@@ -7,16 +7,19 @@
         "topthink/framework": "^5.1.10 || ^6.0.0"
     },
     "license": "MIT",
-    "autoload": {
-        "psr-4": {
-            "agthink\\think-auth\\": "src"
-        }
-    },
     "authors": [
         {
             "name": "AG",
             "email": "277493165@qq.com"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "agthink\\auth\\": "src",
+        }
+    },
+    "extra": {
+
+    },
     "minimum-stability": "dev"
 }
