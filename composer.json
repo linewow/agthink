@@ -16,7 +16,10 @@
     "autoload": {
         "psr-4": {
             "agthink\\auth\\": "src"
-        }
+        },
+        "files": [
+            "src/helper.php"
+        ]
     },
     "minimum-stability": "dev"
 }

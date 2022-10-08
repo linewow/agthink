@@ -10,5 +10,4 @@ class Auth extends Facade
    {
        return 'agthink\auth\Auth';
    }
-
 }
