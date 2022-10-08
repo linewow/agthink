@@ -21,5 +21,12 @@
             "src/helper.php"
         ]
     },
+    "extra": {
+        "think": {
+            "services": [
+                "agthink\\auth\\Service"
+            ]
+        }
+    },
     "minimum-stability": "dev"
 }
