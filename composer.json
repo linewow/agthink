@@ -15,7 +15,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "agthink\\auth\\": "src",
+            "agthink\\auth\\": "src"
         }
     },
     "minimum-stability": "dev"
