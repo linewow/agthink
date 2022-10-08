@@ -18,8 +18,5 @@
             "agthink\\auth\\": "src",
         }
     },
-    "extra": {
-
-    },
     "minimum-stability": "dev"
 }
