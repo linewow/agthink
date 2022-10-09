@@ -4,7 +4,8 @@
     "type": "library",
     "require": {
         "php": "^7.0 || ^8.0",
-        "topthink/framework": "^5.1.10 || ^6.0.0"
+        "topthink/framework": "^6.0.0",
+        "firebase/php-jwt": "^6.3.0"
     },
     "license": "MIT",
     "authors": [
