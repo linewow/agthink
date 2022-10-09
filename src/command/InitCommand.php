@@ -9,20 +9,22 @@
 namespace agthink\auth\command;
 
 use think\console\Input;
+use think\console\input\Option;
 use think\console\Output;
+use think\facade\Console;
 
 class InitCommand extends \think\console\Command
 {
     protected function configure()
     {
         // 指令配置
-        $this->setName('auth:config')
-            ->setDescription('Create a config for the think-auth');
+        $this->setName('auth:init')
+            ->setDescription('Initialize the current dependent package');
     }
 
     protected function execute(Input $input, Output $output)
     {
-       $configFilePath = app()->getAppPath().'..'.DIRECTORY_SEPARATOR.'config'.DIRECTORY_SEPARATOR.'auth.php';
+        $configFilePath = app()->getAppPath().'..'.DIRECTORY_SEPARATOR.'config'.DIRECTORY_SEPARATOR.'auth.php';
         if (is_file($configFilePath)) {
             $output->writeln('Config file is exist');
             return;

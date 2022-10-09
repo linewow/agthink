@@ -12,8 +12,8 @@ class TableCommand extends \think\console\Command
     protected function configure()
     {
         // 指令配置
-        $this->setName('auth:table')
-            ->setDescription('Create a migration for the think-auth');
+        $this->setName('auth:database')
+            ->setDescription('Generate data table and write data');
     }
 
     protected function execute(Input $input, Output $output)
@@ -29,9 +29,10 @@ class TableCommand extends \think\console\Command
     public function createMigration(){
         $pathDir = __DIR__.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'database'.DIRECTORY_SEPARATOR.'migrations'.DIRECTORY_SEPARATOR;
         $settingPath = app()->getAppPath().'..'.DIRECTORY_SEPARATOR.'config'.DIRECTORY_SEPARATOR.'auth.php';
-        $setting = app()->config->get('auth');
         if(!file_exists($settingPath)){
             $setting = require __DIR__.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'config.php';
+        }else{
+            $setting = require $settingPath;
         }
         $databasePath = app()->getAppPath().'..'.DIRECTORY_SEPARATOR.'database'.DIRECTORY_SEPARATOR.'migrations'.DIRECTORY_SEPARATOR;
         $table_name = [

@@ -1,5 +1,8 @@
 <?php
 return [
+    // 默认应用
+    'default_app'      => 'index',
+    'default_route'    => 'index/route/route.php',
     'tables'      => [
         'menu'             => 'admin_menus',
         'permission_menu'  => 'admin_permission_menus',
