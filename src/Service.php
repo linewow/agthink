@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm
- * Desc: 功能描述
- * User: AG
- * Date: 2022/10/8 15:01
- */
 
 namespace agthink\auth;
 
@@ -20,7 +14,5 @@ class Service extends \think\Service
             InitCommand::class,
             TableCommand::class
         ]);
-        Console::call('auth:config');
-        Console::call('auth:table');
     }
 }
