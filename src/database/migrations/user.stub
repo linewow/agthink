@@ -1,0 +1,24 @@
+<?php
+
+use think\migration\Migrator;
+use think\migration\db\Column;
+
+class {{class}} extends Migrator
+{
+    public function change()
+    {
+        $table = $this->table('{{table}}');
+        $table->setComment('')->setEngine('MyISAM');
+        $table->addColumn(Column::string('account',120));
+        $table->addColumn(Column::string('password',80));
+        $table->addColumn(Column::string('name',200));
+        $table->addColumn(Column::tinyInteger('status',4)->setDefault(1)->setComment('1正常2禁用3黑名单'));
+        $table->addColumn(Column::string('avatar',200)->setDefault(null)->setNullable());
+        $table->addColumn(Column::string('remember_token',200)->setDefault(null)->setNullable());
+        $table->addColumn(Column::integer('wrong_number')->setDefault(0)->setNullable());
+        $table->addColumn(Column::dateTime('last_time')->setDefault(null)->setNullable());
+        $table->addIndex(['account'],['unique' => true]);
+        $table->addTimestamps();
+        $table->create();
+    }
+}

@@ -18,7 +18,7 @@
             "agthink\\auth\\": "src"
         },
         "files": [
-            "src/helper.php"
+            "src/config.php"
         ]
     },
     "extra": {

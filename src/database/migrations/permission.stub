@@ -1,0 +1,22 @@
+<?php
+
+use think\migration\Migrator;
+use think\migration\db\Column;
+
+class {{class}} extends Migrator
+{
+    public function change()
+    {
+        $table = $this->table('{{table}}');
+        $table->setComment('')->setEngine('MyISAM');
+        $table->addColumn(Column::string('name',50)->setDefault(''));
+        $table->addColumn(Column::string('slug',50)->setDefault(''));
+        $table->addColumn(Column::string('http_method',200)->setDefault(null)->setNullable());
+        $table->addColumn(Column::text('http_path')->setDefault(null)->setNullable());
+        $table->addColumn(Column::integer('order')->setDefault(0));
+        $table->addColumn(Column::bigInteger('parent_id')->setDefault(0));
+        $table->addIndex(['slug'],['unique'=>true]);
+        $table->addTimestamps();
+        $table->create();
+    }
+}

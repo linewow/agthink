@@ -1,0 +1,19 @@
+<?php
+
+use think\migration\Migrator;
+use think\migration\db\Column;
+
+class {{class}} extends Migrator
+{
+    public function change()
+    {
+        $table = $this->table('{{table}}');
+        $table->setComment('')->setEngine('MyISAM');
+        $table->setId(false);
+        $table->addColumn(Column::bigInteger('role_id'));
+        $table->addColumn(Column::bigInteger('permission_id'));
+        $table->addIndex(['role_id','permission_id'],['unique' => true]);
+        $table->addTimestamps();
+        $table->create();
+    }
+}

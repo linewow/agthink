@@ -1,0 +1,23 @@
+<?php
+
+use think\migration\Migrator;
+use think\migration\db\Column;
+
+class {{class}} extends Migrator
+{
+    public function change()
+    {
+        $table = $this->table('{{table}}');
+        $table->setComment('')->setEngine('MyISAM');
+        $table->addColumn(Column::bigInteger('parent_id')->setDefault(0));
+        $table->addColumn(Column::string('order',50)->setDefault(0));
+        $table->addColumn(Column::string('title',50)->setDefault(''));
+        $table->addColumn(Column::string('icon',50)->setDefault(null)->setNullable());
+        $table->addColumn(Column::string('uri',50)->setDefault(null)->setNullable());
+        $table->addColumn(Column::string('extension',50)->setDefault(''));
+        $table->addColumn(Column::tinyInteger('show',4)->setDefault(1));
+        $table->addColumn(Column::string('lang',50)->setDefault(null));
+        $table->addTimestamps();
+        $table->create();
+    }
+}
